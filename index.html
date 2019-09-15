@@ -4,11 +4,24 @@
 </head>       
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=0.85, shrink-to-fit=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <style>
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 68%;
+}
+
+
+
 #pop
 {
     border-style: solid;
@@ -17,26 +30,25 @@
 }
 #pop
 {
-  margin: 5% 25%;
+  margin: 2.5% 25%;
 }
 p
 {
   margin-top: 10%;  
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 25%;
+  margin-left: 25%;
   margin-bottom: 10%;
 }
 #blue
 {
-  text-align: center;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 #bluez
 {
-  text-align: right;
-  margin-right: 15%;
-  margin-left: 15%;
+  text-align: center;
+ 
+  margin-left: 40%;
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -74,5 +86,31 @@ of "C" 101 </p>
 <div id="blue"> Well I am at intermediate level now in C and finally am picking back up JS </div>
 <div id="bluez"> August_2019</div>   
 </div>
-<div id="bluezz"> <img class="img-responsive" src="https://66.media.tumblr.com/cf26f4bf6fa3c40e0bdabe7f6dbe168d/tumblr_oiaxpqZ9z11vhjvxco1_500.jpg" alt="Chania" width="211" height="376"></div>
+<div>  
+<button class="button" onclick="topFunction()" id="myBtn" title="Go to top"><img src="https://i.imgur.com/flvMGFE.png"></button></div>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "_";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+  
+
+
+
 </html>
