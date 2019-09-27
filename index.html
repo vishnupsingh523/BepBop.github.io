@@ -9,16 +9,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <style>
-.button
+#button
 {
   background-color: white;
   border: none;
   color: white;
-  align-content: center;
-  margin-left: 60%;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
+  margin-left: 75%;
 }
 
 #pop
@@ -29,14 +25,13 @@
 }
 #pop
 {
-  margin: 5% 20%;
+  margin: 5% 30%;
 }
 p
 {
   margin-top: 10%;  
   margin-right: 25%;
   margin-left: 25%;
-  margin-bottom: 10%;
   text-align: center;
 }
 #blue
@@ -80,21 +75,31 @@ h2
 <div id="pop">
     <h1> Intro. </h1>
     <h2> Hello World</h2>
-<p align="justify"> I am fresher at LPUniversity persuing CSE. This is my monthy r&#233sum&#233. </p>
-<p align="justify"> I have been working on inroducing myself to world of javascript via React and of course pushing this html/css/bootstrap out, but sadly, ugh, thinking of dropping JS for couple of weeks in favour
+<p> I am fresher at LPUniversity persuing CSE. This is my monthy r&#233sum&#233. </p>
+<p> I have been working on inroducing myself to world of javascript via React and of course pushing this html/css/bootstrap out, but sadly, ugh, thinking of dropping JS for couple of weeks in favour
 of "C" 101 </p>
 <div id="bluez"> July_2019 </div>
 <div id="blue"> Well I am at intermediate level in C now and finally am picking JS back up </div>
 <div id="bluez"> August_2019</div>   
 </div>
 <div>  
-<button class="button" onclick="topFunction()" id="myBtn" title="Go to top"><img  src="https://i.imgur.com/rmlz6jf.png" class="img-fluid" alt="Responsive image"></button></div>
+<button id="button" onclick="topFunction()" id="myBtn" title="Go to top"><img  src="https://i.imgur.com/ftTDP4F.png" class="img-fluid" alt="Responsive image"> </button>
 <script>
   var mybutton = document.getElementById("myBtn");
+  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  </script>
-  </body>
-  </html>
+</script>
+</body>
+</html>
